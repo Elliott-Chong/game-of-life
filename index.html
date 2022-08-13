@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./sketch.js" defer></script>
+    <script src="./Cell.js" defer></script>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="./p5.min.js" defer></script>
+  </head>
+  <body>
+    <main id="container">
+      <div id="canvas"></div>
+      <section id="overarching-div">
+        <div id="info-div">
+          <p class="info">
+            Generation: <span class="content" id="generation">0</span>
+          </p>
+        </div>
+        <div id="control-div">
+          <div class="form-control">
+            <label>Speed: (1-10)</label>
+            <div id="speed"></div>
+          </div>
+        </div>
+        <div id="button-div">
+          <div id="start-btn"></div>
+          <div id="reset-btn"></div>
+          <a
+            href="https://github.com/elliott-chong/smart-rockets"
+            class="btn credit"
+            >Source code</a
+          >
+        </div>
+      </section>
+      <div class="description-div">
+        <p class="desc">
+          The Game of Life, also known simply as Life, is a cellular automaton
+          devised by the British mathematician John Horton Conway in 1970. It is
+          a zero-player game, meaning that its evolution is determined by its
+          initial state, requiring no further input. One interacts with the Game
+          of Life by creating an initial configuration and observing how it
+          evolves. It is Turing complete and can simulate a universal
+          constructor or any other Turing machine.
+
+        </p>
+        <br />
+        <p class="desc">
+          The universe of the Game of Life is an infinite, two-dimensional
+          orthogonal grid of square cells, each of which is in one of two
+          possible states, live or dead (or populated and unpopulated,
+          respectively). Every cell interacts with its eight neighbours, which
+          are the cells that are horizontally, vertically, or diagonally
+          adjacent. At each step in time, the following transitions occur:
+        </p>
+        <br />
+        <p class="desc">
+          <ol>
+
+          <li>
+            Any live cell with fewer than two live neighbours dies, as if by
+            underpopulation.
+          </li>
+          <li>
+            Any live cell with two or three live neighbours lives on to the next
+            generation.
+          </li>
+          <li>
+            Any live cell with more than three live neighbours dies, as if by
+            overpopulation.
+          </li>
+          <li>
+            Any dead cell with exactly three live neighbours becomes a live
+            cell, as if by reproduction.
+          </li>
+          </ol>
+        </p>
+        <br />
+        <p class="desc">
+          The initial pattern constitutes the seed of the system. The first
+          generation is created by applying the above rules simultaneously to
+          every cell in the seed, live or dead; births and deaths occur
+          simultaneously, and the discrete moment at which this happens is
+          sometimes called a tick. Each generation is a pure function of the
+          preceding one. The rules continue to be applied repeatedly to create
+          further generations.
+        </p>
+        <p>          <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+          >wikipedia</a
+        ></p>
+      </div>
+    </main>
+  </body>
+</html>

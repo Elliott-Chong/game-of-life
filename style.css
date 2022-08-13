@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  --primary-color:chocolate ;
+  font-family: 'Space Mono', monospace;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style-position: inside;
+}
+
+main#container {
+  display: grid;
+  grid-template-areas: 'canvas controls'
+  'desc controls';
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  align-items: center;
+  gap: 2rem;
+}
+
+#overarching-div{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+#canvas {
+  grid-area: canvas;
+}
+
+.info {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.form-control label {
+  font-weight: 600;
+}
+
+.description-div {
+  max-width: fit-content;
+  grid-area: desc;
+  align-self: start
+}
+
+.content{
+  color: var(--primary-color);
+}
+
+#button-div{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: flex-start;
+}
+
+button ,.btn{
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  color:white;
+  padding: .25rem .5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px grey;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.credit {
+  background-color: firebrick !important;
+}
+
+@media (max-width:800px) {
+  main#container {
+    flex-direction: column;
+  }
+
+  #overarching-div{
+    flex-direction: column;
+  }
+  main#container {
+    display: grid;
+    grid-template-areas: 'canvas'
+    'controls'
+    'desc';
+ }
+  
+}
